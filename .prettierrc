@@ -1,0 +1,28 @@
+{
+  "eslintIntegration": false,
+  "stylelintIntegration": false,
+  "tabWidth": 4,
+  "singleQuote": true,
+  "semi": true,
+  "printWidth": 120,
+  "overrides": [
+    {
+      "files": "*.json",
+      "options": {
+        "tabWidth": 4
+      }
+    },
+    {
+      "files": "*.html",
+      "options": {
+        "tabWidth": 4
+      }
+    },
+    {
+      "files": ".prettierrc",
+      "options": {
+        "parser": "json"
+      }
+    }
+  ]
+}
