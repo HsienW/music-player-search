@@ -56,4 +56,7 @@ testem.log
 .DS_Store
 Thumbs.db
 
-
+## ENV Files
+#.env
+.env.config.dev
+.env.config.prod

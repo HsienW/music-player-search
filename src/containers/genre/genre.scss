@@ -1,0 +1,18 @@
+@import '../../../../common/style/variable';
+
+.search-container-title {
+  font-size: $font-size-l;
+  font-weight: $font-weight-xl;
+  color: $text-color;
+  margin-top: $margin-size-s;
+}
+
+.search-container-title:first-of-type {
+  margin-top: 0;
+}
+
+.search-container-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
