@@ -1,33 +1,31 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-
-const SearchDetail = () => {
-    return <h2>Search Detail</h2>;
-};
+import React, {useState} from 'react';
+import {Genre} from '../containers/genre/genre';
+import {BrowserRouter, Switch, Route, Link} from 'react-router-dom';
+import './root.scss';
 
 export const SearchRootDom = (props) => {
-    const { routerBase } = props;
+    const {routerBase, setGlobalState, getGlobalState, observer, observerKey} = props;
+    // const defaultValue = getGlobalState('init');
+    // const [testValue, changeValue] = useState(defaultValue);
+    //
+    // const click = (handler) => {
+    //     const newValue = Math.floor(Math.random() * 5) + 1;
+    //     changeValue(newValue);
+    //     console.log(getGlobalState('init'));
+    //     return handler({init: newValue});
+    // };
 
     return (
-        <div>
-            <h2>Search root dom is working!</h2>
-            <Router>
-                <div>
-                    <nav>
-                        <ul>
-                            <li>
-                                <Link to={'/portal'}>Go to Portal</Link>
-                            </li>
-                        </ul>
-                    </nav>
-                    <Switch>
-                        <Route path={`${routerBase}/detail`}>
-                            <SearchDetail />
-                        </Route>
-                    </Switch>
-                </div>
-            </Router>
-        </div>
+        <BrowserRouter>
+            <Switch>
+                <Route path={`${routerBase}/genre`}>
+                    <Genre
+                        observer={observer}
+                        observerKey={observerKey}
+                    />
+                </Route>
+            </Switch>
+        </BrowserRouter>
     );
 };
 

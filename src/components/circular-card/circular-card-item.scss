@@ -1,0 +1,23 @@
+@import '../../../../common/style/variable';
+
+.circular-card-item {
+  width: 200px;
+  cursor: pointer;
+}
+
+.circular-card-item-title {
+  color: $text-color;
+  font-size: $font-size-s;
+  font-weight: $font-weight-2xl;
+  text-align: center;
+  text-overflow : ellipsis;
+  margin: $margin-size-base 0 $margin-size-base 0;
+}
+
+.circular-card-item-subtitle {
+  color: $text-color-secondary;
+  font-size: $font-size-base;
+  text-align: center;
+  text-overflow : ellipsis;
+}
+
