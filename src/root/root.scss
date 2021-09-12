@@ -1,10 +1,10 @@
-@import '../../../music-player-common/style/reset';
-@import '../../../music-player-common/style/layout';
-@import '../../../music-player-common/style/variable';
-@import '../../../music-player-common/style/mixin';
+@import '~music-player-common/src/style/reset';
+@import '~music-player-common/src/style/layout';
+@import '~music-player-common/src/style/variable';
+@import '~music-player-common/src/style/mixin';
 @import '~antd/dist/antd.css';
 
-#search-root {
+#search-root-dom {
   padding: $padding-size-s;
 }
 
