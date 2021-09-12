@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 // const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
-const baseWebpackConfig = require('../common/webpack/webpack.config.base');
+const baseWebpackConfig = require('music-player-common/src/webpack/webpack.config.base');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const {merge} = require('webpack-merge');
 const path = require('path');
@@ -18,7 +18,6 @@ module.exports = merge(baseWebpackConfig, {
         library: `${packageName}-[name]_dll`,
         libraryTarget: 'umd',
         jsonpFunction: `webpackJsonp_${packageName}`,
-        path: path.resolve(__dirname, 'search'),
     },
     module: {
         rules: [

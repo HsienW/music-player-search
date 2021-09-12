@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {singleAppGlobalState} from '../../music-player-common/state/single-app-global-state';
-import {globalActiveListener} from '../../music-player-common/listener/global-active-listener';
-import {globalActiveMediator} from '../../music-player-common/mediator/global-active-mediator';
-import {observer, observerKey} from '../../music-player-common/observer';
+import {singleAppGlobalState} from 'music-player-common';
+import {globalActiveListener} from 'music-player-common';
+import {globalActiveMediator} from 'music-player-common';
+import {observer, observerKey} from 'music-player-common';
 import {SearchRootDom} from './root/root';
 import './public-path';
 
@@ -22,11 +22,11 @@ function renderSearchRoot(props) {
 }
 
 function renderSingleSearchRoot(props) {
-    import ('../../music-player-common/containers/auth/auth');
-    import ('../../music-player-common/containers/loading-spin/loading-spin');
-    import ('../../music-player-common/containers/side-bar/side-bar');
-    import ('../../music-player-common/containers/header-bar/header-bar');
-    import ('../../music-player-common/containers/player-bar/player-bar');
+    import ('music-player-common/src/containers/auth/auth');
+    import ('music-player-common/src/containers/loading-spin/loading-spin');
+    import ('music-player-common/src/containers/side-bar/side-bar');
+    import ('music-player-common/src/containers/header-bar/header-bar');
+    import ('music-player-common/src/containers/player-bar/player-bar');
     import ('./root/root.scss');
 
     const {container, routerBase, setGlobalState, getGlobalState, onStateChange, observer, observerKey} = props;
@@ -65,7 +65,7 @@ if (!window.__POWERED_BY_QIANKUN__) {
     console.log('search 我自己運行了');
 
     const routerBase = '/search';
-    const authRedirectURL = `${routerBase}/search-page1`;
+    const authRedirectURL = `${routerBase}/genre`;
     const {getGlobalState, setGlobalState} = singleAppGlobalState;
     const props = {routerBase, getGlobalState, setGlobalState, observer, observerKey};
 
