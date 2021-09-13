@@ -7,7 +7,9 @@
 # compiled output
 /dist
 /tmp
-/out-tsc
+/out-
+/search
+/music-player-search
 
 # dependencies
 /node_modules
